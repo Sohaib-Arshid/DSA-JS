@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array-T</title>
+    <script>
+        function handler(){
+            let arr = [12,23,34,45,56,23];
+            let newvel = document.getElementById("dot").value
+            let position = document.getElementById("lot").value
+
+            for(let i = arr.length-1 ; i>=0 ; i--){
+                if(i>=position){
+                    arr[i+1] = arr[i]
+                    if(i==position){
+                        arr[i] = newvel;
+                    }
+                }
+            }  
+            console.log(arr);
+        } 
+
+        let data = [12, 34 , 45 ,56 ,67,78,9,98,56]
+        data.splice(6 , 0 , 4567)
+        console.log(data);
+        
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Enter new number" name="" id="dot">
+        <input type="text" placeholder="Enter position" name="" id="lot">
+        
+        <button onclick="handler()">enter</button>
+    </div>
+</body>
+</html>

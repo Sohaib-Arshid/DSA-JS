@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function handle(){
+         let arr = [12,34,56,67,78,89,98,67]
+     console.log(arr);
+     let pos = document.getElementById('dot').value;
+     pos = parseInt(pos)
+     for(let i = pos ; i<arr.length-1;i++){
+        arr[i]=arr[i+1];
+     }
+     arr.length = arr.length-1;
+     console.log(arr);     
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <label for="dot">Enter position you want delete</label>
+        <input type="text" name="" id="dot" placeholder="enter number">
+        <h2>{arr}</h2>
+        <button onclick="handle()">submit</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array-T</title>
+    <script>
+        let arr = [12 ,23 ,34,45,56,67,78,89,23,454,2]
+        for(let i =0; i< arr.length ; i++){
+            document.write(`Array ${i} is ${arr[i]} <br>`)
+        }
+        document.write(arr[5])
+
+        function getelement(){
+            let ele = document.getElementById("dot").value
+            alert(arr[ele])
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Enter somethig" id="dot">
+        <button onclick="getelement()">Click Here</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stack
+    </title>
+    <script>
+        let arr = [];
+        let size = arr.length;
+
+        function push() {
+            let x = document.getElementById('dot').value;
+            arr[size] = x;
+            size += 1;
+            console.log(arr)
+            document.getElementById('dot').value='';
+        }
+
+        function pop() {
+            if (size > 0) {
+                size -= 1;
+                arr.length = size;
+                console.log(arr)
+            } else {
+                console.log('stack is already empty');
+            }
+        }
+
+        function display() {
+            for (let i = 0; i < size; i++) {
+                console.log(arr[i])
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="" id="dot" placeholder="Enter the value">
+    <button onclick="push()">ADD Element to stack</button><br>
+    <button onclick="pop()">Remove element to stack</button><br>
+    <button onclick="display()">Display all stack </button><br>
+</body>
+
+</html>
