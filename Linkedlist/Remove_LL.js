@@ -22,7 +22,7 @@ class Node {
         let counter = 1;
         let leadnode = this.head;
         if (data == 1) {
-            this.head == this.head.next;
+            this.head = this.head.next;
         } else {
             while (counter < data - 1) {
                 leadnode = leadnode.next;
