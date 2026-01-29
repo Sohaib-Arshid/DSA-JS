@@ -83,33 +83,33 @@ class AVL {
         return newnode;
     }
 
-    Search(data) {
-        if (!this.root) {
-            return false;
-        }
+    // Search(data) {
+    //     if (!this.root) {
+    //         return false;
+    //     }
 
-        let currentNode = this.root;
-        while (currentNode) {
-            if (data === currentNode.value) {
-                console.log('value found --> ', currentNode.value);
-                return true;
-            } else if (data < currentNode.value) {
-                currentNode = currentNode.left;
-            }else{
-                currentNode = currentNode.right;
-            }
-        }
-        return false;
-    }
+    //     let currentNode = this.root;
+    //     while (currentNode) {
+    //         if (data === currentNode.value) {
+    //             console.log('value found --> ', currentNode.value);
+    //             return true;
+    //         } else if (data < currentNode.value) {
+    //             currentNode = currentNode.left;
+    //         }else{
+    //             currentNode = currentNode.right;
+    //         }
+    //     }
+    //     return false;
+    // }
 
 }
 
 const Node1 = new AVL()
 Node1.Add(10);
 Node1.Add(12);
-Node1.Add(13);
-Node1.Add(15);
-Node1.Add(16);
-Node1.Add(18);
-Node1.Add(19);
+// Node1.Add(13);
+// Node1.Add(15);
+// Node1.Add(16);
+// Node1.Add(18);
+// Node1.Add(19);
 Node1.Search(19);
