@@ -58,6 +58,18 @@ class MaxHeap {
         let largest = i;
         let leftchild = this.getleftindex(i)
         let rightchild = this.getrightindex(i)
+
+        if(leftchild < this.heap.length && this.heap[leftchild] > this.heap[largest]){
+            largest = leftchild;
+        }
+        if(rightchild< this.heap.length && this.heap[rightchild] > this.heap[largest]){
+            largest = rightchild;
+        }
+
+        if (largest != i) {
+            this.swap(largest , i)
+            this.heapfydown(largest)
+        }
     }
 }
 
